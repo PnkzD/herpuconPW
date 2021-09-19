@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="master.xhtml">
+
+
+	<ui:define name="title">
+        .:Listado de Proyectos:.
+    </ui:define>
+
+	<ui:define name="titleCont">
+		<span>Proyectos Registrados </span>
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form>
+			<div class="row">
+				<p:commandButton value="Nuevo"
+					action="#{HerpuconEntiController.nuevoProyecto()}"
+					styleClass="btn btn-primary" ajax="false" />
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="form-group table-responsive box-table-class">
+
+						<p:dataTable id="lstVaccination" var="v"
+							value="#{HerpuconProyectoController.listaCertificacion}"
+							paginator="true" paginatorPosition="top"
+							rowsPerPageTemplate="10,20,30,40,50" rows="10"
+							styleClass="table table-bordered"
+							emptyMessage="No existen registros" rowIndexVar="item"
+							style="margin-bottom:0">
+
+							<p:column headerText="Proyecto" sortBy="#{v.cproyecto}">
+								<h:outputText value="#{v.cproyecto}" />
+							</p:column>
+
+							<p:column headerText="Nombre del Proyecto"
+								sortBy="#{v.d_nombreproyecto}">
+								<h:outputText value="#{v.d_nombreproyecto}" />
+							</p:column>
+							<p:column headerText="Fecha de Entrega Proyecto"
+								sortBy="#{v.f_entregaproyecto}">
+								<h:outputText value="#{v.f_entregaproyecto}" />
+							</p:column>
+							<p:column headerText="Fecha de Inicio Proyecto"
+								sortBy="#{v.f_inicioproyecto}">
+								<h:outputText value="#{v.f_inicioproyecto}" />
+							</p:column>
+							<p:column headerText="Tipo de proyecto"
+								sortBy="#{v.i_tipoproyecto}">
+								<h:outputText value="#{v.i_tipoproyecto}" />
+							</p:column>
+						
+							
+						</p:dataTable>
+					</div>
+
+				</div>
+			</div>
+		</h:form>
+	</ui:define>
+
+	<ui:define name="footerCont">
+
+	</ui:define>
+</ui:composition>
+</html>
