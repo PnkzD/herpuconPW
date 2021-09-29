@@ -9,6 +9,12 @@
 	<class>pe.edu.upc.entities.HerpuconEnti</class>
 	<class>pe.edu.upc.entities.HerpuconProyecto</class>
 	<class>pe.edu.upc.entities.HerpuconCertification</class>
+	<class>pe.edu.upc.entities.HerpuconAvance</class>
+	<class>pe.edu.upc.entities.HerpuconIncidente</class>
+	<class>pe.edu.upc.entities.HerpuconObrero</class>
+	<class>pe.edu.upc.entities.HerpuconActividad</class>
+	<class>pe.edu.upc.entities.HerpuconMaestroDeObra</class>
+	
 	<properties>
 
 			<property

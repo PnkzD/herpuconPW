@@ -1,11 +1,18 @@
 package pe.edu.upc.entities;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -28,6 +35,14 @@ public class HerpuconProyecto {
 	@Column(name="I_TipoProyecto",nullable=false,length=40)
 	private String I_TipoProyecto;
 
+	@ManyToMany(cascade= {CascadeType.PERSIST,CascadeType.MERGE})
+	@JoinTable(
+		name = "proyecto_x_maestroobra",
+				joinColumns=@JoinColumn(name="proyecto_id"),
+				inverseJoinColumns=@JoinColumn(name="maestro_id")	)
+	private List<HerpuconMaestroDeObra> maestros = new ArrayList<HerpuconMaestroDeObra>();
+	
+	
 	public HerpuconProyecto() {
 		super();
 		// TODO Auto-generated constructor stub

@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,16 +28,12 @@ public class HerpuconEnti {
 	@Column(name = "T_Direccion", nullable = false, length = 45)
 	private String T_Direccion;
 	
-
-	
-
-	public HerpuconEnti() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	@ManyToOne
+	@JoinColumn(name="CCertificacion",nullable=false)
+	private HerpuconCertification CCertificacion;
 
 	public HerpuconEnti(int cdni, String d_Nombre, String d_Apellido, long n_Celular, String t_Email,
-			String t_Direccion, String cCertificacion) {
+			String t_Direccion, HerpuconCertification cCertificacion) {
 		super();
 		this.Cdni = cdni;
 		this.D_Nombre = d_Nombre;
@@ -43,6 +41,12 @@ public class HerpuconEnti {
 		this.N_Celular = n_Celular;
 		this.T_Email = t_Email;
 		this.T_Direccion = t_Direccion;
+		this.CCertificacion = cCertificacion;
+	}
+
+	public HerpuconEnti() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getCdni() {
@@ -50,7 +54,7 @@ public class HerpuconEnti {
 	}
 
 	public void setCdni(int cdni) {
-		this.Cdni = cdni;
+		Cdni = cdni;
 	}
 
 	public String getD_Nombre() {
@@ -58,7 +62,7 @@ public class HerpuconEnti {
 	}
 
 	public void setD_Nombre(String d_Nombre) {
-		this.D_Nombre = d_Nombre;
+		D_Nombre = d_Nombre;
 	}
 
 	public String getD_Apellido() {
@@ -66,7 +70,7 @@ public class HerpuconEnti {
 	}
 
 	public void setD_Apellido(String d_Apellido) {
-		this.D_Apellido = d_Apellido;
+		D_Apellido = d_Apellido;
 	}
 
 	public long getN_Celular() {
@@ -74,7 +78,7 @@ public class HerpuconEnti {
 	}
 
 	public void setN_Celular(long n_Celular) {
-		this.N_Celular = n_Celular;
+		N_Celular = n_Celular;
 	}
 
 	public String getT_Email() {
@@ -82,7 +86,7 @@ public class HerpuconEnti {
 	}
 
 	public void setT_Email(String t_Email) {
-		this.T_Email = t_Email;
+		T_Email = t_Email;
 	}
 
 	public String getT_Direccion() {
@@ -90,8 +94,18 @@ public class HerpuconEnti {
 	}
 
 	public void setT_Direccion(String t_Direccion) {
-		this.T_Direccion = t_Direccion;
+		T_Direccion = t_Direccion;
 	}
+
+	public HerpuconCertification getCCertificacion() {
+		return CCertificacion;
+	}
+
+	public void setCCertificacion(HerpuconCertification cCertificacion) {
+		CCertificacion = cCertificacion;
+	}
+
+	
 
 	
 

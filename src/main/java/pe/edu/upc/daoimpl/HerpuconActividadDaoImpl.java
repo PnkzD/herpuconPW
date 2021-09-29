@@ -8,20 +8,20 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
 
-import pe.edu.upc.dao.IHerpuconCertificationDao;
-import pe.edu.upc.entities.HerpuconCertification;
+import pe.edu.upc.dao.IHerpuconActividadDao;
+import pe.edu.upc.entities.HerpuconActividad;
 
-public class HerpuconCertificationDaoImpl implements IHerpuconCertificationDao{
+public class HerpuconActividadDaoImpl implements IHerpuconActividadDao{
 
 	@PersistenceContext(unitName="herpuconPW")
 	private EntityManager em;
 	
 	@Transactional
-	
-	public void insert(HerpuconCertification hc) {
+	@Override
+	public void insert(HerpuconActividad ha) {
 		// TODO Auto-generated method stub
 		try {
-			em.persist(hc);
+			em.persist(ha);
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Error al insertar");
@@ -29,22 +29,19 @@ public class HerpuconCertificationDaoImpl implements IHerpuconCertificationDao{
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<HerpuconCertification> list() {
+	@Override
+	public List<HerpuconActividad> list() {
 		// TODO Auto-generated method stub
-		List<HerpuconCertification> lista= new ArrayList<HerpuconCertification>();
-		
+		List<HerpuconActividad> lista= new ArrayList<HerpuconActividad>();
 		try {
-			
-			Query q = em.createQuery("select c from HerpuconCertification c");
-			lista=(List<HerpuconCertification>)q.getResultList();
-			
-			
+			Query q= em.createQuery("select a from HerpuconActividad a");
+			lista = (List<HerpuconActividad>) q.getResultList();
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Error al listar");
 		}
+		
 		return lista;
 	}
-	
 
 }

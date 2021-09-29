@@ -36,7 +36,7 @@ public class HerpuconProyectoDaoImpl implements IHerpuconProyectoDao {
 		// TODO Auto-generated method stub
 		List<HerpuconProyecto>lista = new ArrayList<HerpuconProyecto>();
 		try {
-			Query q = em.createQuery("select hp from Proyecto hp ");
+			Query q = em.createQuery("select hp from HerpuconProyecto hp ");
 			lista = (List<HerpuconProyecto>)q.getResultList();
 		} catch (Exception e) {
 			// TODO: handle exception
