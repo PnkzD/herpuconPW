@@ -10,4 +10,5 @@ public interface IHerpuconProyecto {
 	
 	public List<HerpuconProyecto> list();
 	
+	public void eliminar(int CProyecto);
 }

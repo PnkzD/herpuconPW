@@ -26,4 +26,10 @@ public class HerpuconProyectoImpl implements IHerpuconProyecto {
 		return hepodao.list();
 	}
 
+	@Override
+	public void eliminar(int CProyecto) {
+		// TODO Auto-generated method stub
+		hepodao.eliminar(CProyecto);
+	}
+
 }

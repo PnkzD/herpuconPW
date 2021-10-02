@@ -47,5 +47,18 @@ public class HerpuconEntiDaoImpl implements IHerpuconDao {
 
 		return lista;
 	}
+	
+	
+	@Override
+	public void eliminar(int Cdni) {
+		// TODO Auto-generated method stub
+		HerpuconEnti he = new HerpuconEnti();
+		try {
+			he = em.getReference(HerpuconEnti.class, Cdni);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 
 }

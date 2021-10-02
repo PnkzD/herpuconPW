@@ -40,6 +40,14 @@ public class HerpuconProyectoController {
 	public void list() {
 		listaProyectos = herpuservice.list();
 	}
+	public void eliminar(HerpuconProyecto proyecto) {
+	try {
+		herpuservice.eliminar(proyecto.getCProyecto());
+		this.list();
+	} catch (Exception e) {
+		e.getMessage();
+	}
+	}
 
 	// getters & setters
 	public HerpuconProyecto getHerpuproyenti() {

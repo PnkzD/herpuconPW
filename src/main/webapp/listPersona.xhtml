@@ -31,10 +31,9 @@
 					<div class="form-group table-responsive box-table-class">
 
 						<p:dataTable id="lstPersona" var="z"
-							value="#{herpuconEntiController.listaPersona}"
-							paginator="true" paginatorPosition="top"
-							rowsPerPageTemplate="10,20,30,40,50" rows="10"
-							styleClass="table table-bordered"
+							value="#{herpuconEntiController.listaPersona}" paginator="true"
+							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
+							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
@@ -42,31 +41,29 @@
 								<h:outputText value="#{z.cdni}" />
 							</p:column>
 
-							<p:column headerText="Nombre"
-								sortBy="#{z.d_Nombre}">
+							<p:column headerText="Nombre" sortBy="#{z.d_Nombre}">
 								<h:outputText value="#{z.d_Nombre}" />
 							</p:column>
-							<p:column headerText="Apellido"
-								sortBy="#{z.d_Apellido}">
+							<p:column headerText="Apellido" sortBy="#{z.d_Apellido}">
 								<h:outputText value="#{z.d_Apellido}" />
 							</p:column>
-							<p:column headerText="Nro. Celular"
-								sortBy="#{z.n_Celular}">
+							<p:column headerText="Nro. Celular" sortBy="#{z.n_Celular}">
 								<h:outputText value="#{z.n_Celular}" />
 							</p:column>
-							<p:column headerText="Email"
-								sortBy="#{z.t_Email}">
+							<p:column headerText="Email" sortBy="#{z.t_Email}">
 								<h:outputText value="#{z.t_Email}" />
 							</p:column>
-							<p:column headerText="Dirección"
-								sortBy="#{z.t_Direccion}">
+							<p:column headerText="Dirección" sortBy="#{z.t_Direccion}">
 								<h:outputText value="#{z.t_Direccion}" />
 							</p:column>
-							<p:column headerText="Certificación"
-								sortBy="#{z.CCertificacion}">
+							<p:column headerText="Certificación" sortBy="#{z.CCertificacion}">
 								<h:outputText value="#{z.CCertificacion}" />
 							</p:column>
-														
+
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconEntiController.eliminar(persona)}" />
+							</p:column>
 						</p:dataTable>
 					</div>
 

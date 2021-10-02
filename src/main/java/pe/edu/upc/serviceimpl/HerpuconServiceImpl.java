@@ -22,10 +22,16 @@ public class HerpuconServiceImpl implements IHerpuconService {
 		hpdao.insert(he);
 
 	}
+	@Override
+	public void eliminar(int Cdni) {
+		hpdao.eliminar(Cdni);
+	}
 
 	public List<HerpuconEnti> list() {
 		// TODO Auto-generated method stub
 		return hpdao.list();
 	}
+	
+	
 
 }

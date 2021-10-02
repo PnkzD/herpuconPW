@@ -58,8 +58,13 @@
 								sortBy="#{p.i_TipoProyecto}">
 								<h:outputText value="#{p.i_TipoProyecto}" />
 							</p:column>
-						
-							
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconProyectoController.eliminar(p)}" />
+							</p:column>
+
+
+
 						</p:dataTable>
 					</div>
 

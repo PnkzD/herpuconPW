@@ -9,4 +9,6 @@ public interface IHerpuconProyectoDao {
 	public void insert(HerpuconProyecto hp);
 
 	public List<HerpuconProyecto> list();
+	
+	public void eliminar(int CProyecto);
 }

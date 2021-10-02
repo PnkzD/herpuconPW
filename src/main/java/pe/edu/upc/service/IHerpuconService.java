@@ -9,4 +9,6 @@ public interface IHerpuconService {
 	public void insert(HerpuconEnti he);
 	
 	public List<HerpuconEnti>list();
+	
+	public void eliminar(int Cdni);
 }

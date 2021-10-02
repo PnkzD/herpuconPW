@@ -43,6 +43,15 @@ public class HerpuconEntiController {
 	public void list() {
 		listaPersona=herpuservice.list();
 	}
+	
+	public void eliminar(HerpuconEnti persona) {
+		try {
+			herpuservice.eliminar(persona.getCdni());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 	//getter & setters
 
 	public HerpuconEnti getHerpuconenti() {
@@ -60,6 +69,8 @@ public class HerpuconEntiController {
 	public void setListaPersona(List<HerpuconEnti> listaPersona) {
 		this.listaPersona = listaPersona;
 	}
+	
+	
 	
 	
 	

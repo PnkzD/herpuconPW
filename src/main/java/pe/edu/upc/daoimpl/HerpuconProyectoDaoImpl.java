@@ -45,4 +45,20 @@ public class HerpuconProyectoDaoImpl implements IHerpuconProyectoDao {
 		return lista;
 	}
 
+	@Transactional
+	public void eliminar(int CProyecto) {
+		// TODO Auto-generated method stub
+		HerpuconProyecto he = new HerpuconProyecto();
+		try {
+			he = em.getReference(HerpuconProyecto.class, CProyecto);
+			em.remove(he);
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+	
+	
+
 }

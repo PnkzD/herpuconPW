@@ -8,5 +8,8 @@ public interface IHerpuconDao {
 
 	public void insert(HerpuconEnti he);
 	
+	public void eliminar(int Cdni);
+	
 	public List<HerpuconEnti> list();
+	
 }
