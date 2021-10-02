@@ -10,11 +10,11 @@
 
 
 	<ui:define name="title">
-        .:Listado de Certificaciones:.
+        .:Listado de Avances:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Certificaciones Registradas </span>
+		<span>Avances registrados por trabajadores </span>
 	</ui:define>
 
 	<ui:define name="content">
@@ -22,7 +22,7 @@
 		<h:form>
 			<div class="row">
 				<p:commandButton value="Nuevo"
-					action="#{herpuconCertificationController.nuevoCertificado()}"
+					action="#{herpuconAvanceController.nuevoAvance()}"
 					styleClass="btn btn-primary" ajax="false" />
 			</div>
 
@@ -30,27 +30,30 @@
 				<div class="col-sm-12">
 					<div class="form-group table-responsive box-table-class">
 
-						<p:dataTable id="listaCertificacion" var="c"
-							value="#{herpuconCertificationController.listacertificados}"
-							paginator="true" paginatorPosition="top"
-							rowsPerPageTemplate="10,20,30,40,50" rows="10"
-							styleClass="table table-bordered"
+						<p:dataTable id="listaAvance" var="av"
+							value="#{herpuconAvanceController.listaAvance}" paginator="true"
+							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
+							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
-							<p:column headerText="Tipo Certificacion"
-								sortBy="#{c.I_TipoCertificacion}">
-								<h:outputText value="#{c.I_Tipocertificacion}" />
+							<p:column headerText="C_Avance" sortBy="#{av.cavance}">
+								<h:outputText value="#{av.cavance}" />
 							</p:column>
-							<p:column headerText="Vigencia" sortBy="#{v.vigencia}">
-								<h:outputText value="#{v.vigencia}" />
+							<p:column headerText="Descripcion de Avance"
+								sortBy="#{av.d_Avance}">
+								<h:outputText value="#{av.d_Avance}" />
 							</p:column>
-							<p:column headerText="Fecha de Certificacion"
-								sortBy="#{v.f_fecha_certificacion}">
-								<h:outputText value="#{v.f_fecha_certificacion}" />
+							<p:column headerText="Tipo de Avance" sortBy="#{av.d_TipoAvance}">
+								<h:outputText value="#{av.d_TipoAvance}" />
 							</p:column>
-							<p:column headerText="Valido hasta" sortBy="#{v.f_validohasta}">
-								<h:outputText value="#{v.f_validohasta}" />
+							<p:column headerText="Registro de Avance"
+								sortBy="#{av.f_RegistroAvance}">
+								<h:outputText value="#{av.f_RegistroAvance}" />
+							</p:column>
+							<p:column headerText="Dni de Trabajador"
+								sortBy="#{av.dni_Trabajador}">
+								<h:outputText value="#{av.dni_Trabajador}" />
 							</p:column>
 
 

@@ -8,80 +8,59 @@
 <ui:composition template="master.xhtml">
 
 	<ui:define name="title">
-        .:Registro de Personas:.
+        .:Registro de Incidentes:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Registrar Persona</span>
+		<span>Registrar Incidente</span>
 	</ui:define>
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="Cdni" value="Dni"
+			<h:outputLabel for="CIncidente" value="Id"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="Cdni"
+			<p:inputText autocomplete="off" id="CIncidente"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.cdni}"
+				value="#{herpuconIncidenteController.incidenteenti.cincidente}"
 				required="true" />
 
-			<h:outputLabel for="D_Nombre"
-				value="Nombres " styleClass="control-label" />
+			<h:outputLabel for="D_Incidente"
+				value="Descripcion de Incidente" styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="D_Nombre"
+			<p:inputText autocomplete="off" id="D_Incidente"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Nombre}"
+				value="#{herpuconIncidenteController.incidenteenti.d_Incidente}"
 				maxlength="45" required="true" />
 
 
-			<h:outputLabel for="D_Apellido" value="Apellidos "
+			<h:outputLabel for="Fecha_Incidente" value="Fecha de Incidente"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="D_Apellido"
+			<p:inputText autocomplete="off" id="Fecha_Incidente"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Apellido}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			<h:outputLabel for="N_Celular" value="Nro. de Celular"
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="N_Celular"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.n_Celular}"
-				required="true">
-
-			</p:inputText>
-			<h:outputLabel for="T_Email" value="Email "
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="T_Email"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Email}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			<h:outputLabel for="T_Direccion" value="Direccion "
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="T_Direccion"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Direccion}"
+				value="#{herpuconIncidenteController.incidenteenti.fecha_Incidente}"
 				maxlength="45" required="true">
 
 			</p:inputText>
 			
-			<h:outputLabel for="certificacion_ccertificacion" value="Certificacion"
+			<h:outputLabel for="Dni_Trabajador" value="Dni_Trabajador"
 				styleClass="control-label" />
 
+			<p:inputText autocomplete="off" id="Dni_Trabajador"
+				styleClass="form-control"
+				value="#{herpuconIncidenteController.incidenteenti.dni_Trabajador}"
+				maxlength="45" required="true">
+
+			</p:inputText>
 			
 			<br />
 			<p:commandButton value="Grabar"
-				actionListener="#{herpuconEntiController.insert()}"
+				actionListener="#{herpuconIncidenteController.insert()}"
 				styleClass="btn btn-primary " update="@form"
-				action="listPersona?faces-redirect=true" />
+				action="listIncidente?faces-redirect=true" />
 			<p:commandButton value="Cancelar"
-				action="listPersona?faces-redirect=true" immediate="true"
+				action="listIncidente?faces-redirect=true" immediate="true"
 				styleClass="btn btn-default" ajax="false" />
 
 

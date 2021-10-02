@@ -8,80 +8,68 @@
 <ui:composition template="master.xhtml">
 
 	<ui:define name="title">
-        .:Registro de Personas:.
+        .:Registro de Avance:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Registrar Persona</span>
+		<span>Registrar Avance</span>
 	</ui:define>
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="Cdni" value="Dni"
+			<h:outputLabel for="CAvance" value="C_Avance"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="Cdni"
+			<p:inputText autocomplete="off" id="CAvance"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.cdni}"
+				value="#{herpuconAvanceController.avanceenti.cavance}"
 				required="true" />
 
-			<h:outputLabel for="D_Nombre"
-				value="Nombres " styleClass="control-label" />
+			<h:outputLabel for="D_Avance"
+				value="Descripcion de Avance" styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="D_Nombre"
+			<p:inputText autocomplete="off" id="D_Avance"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Nombre}"
+				value="#{herpuconAvanceController.avanceenti.d_Avance}"
 				maxlength="45" required="true" />
 
 
-			<h:outputLabel for="D_Apellido" value="Apellidos "
+			<h:outputLabel for="D_TipoAvance" value="Tipo de Avance"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="D_Apellido"
+			<p:inputText autocomplete="off" id="D_TipoAvance"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Apellido}"
+				value="#{herpuconAvanceController.avanceenti.d_TipoAvance}"
 				maxlength="45" required="true">
 
 			</p:inputText>
-			<h:outputLabel for="N_Celular" value="Nro. de Celular"
+			<h:outputLabel for="F_RegistroAvance" value="Fecha de registro de avance"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="N_Celular"
+			<p:inputText autocomplete="off" id="F_RegistroAvance"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.n_Celular}"
+				value="#{herpuconAvanceController.avanceenti.f_RegistroAvance}"
 				required="true">
 
 			</p:inputText>
-			<h:outputLabel for="T_Email" value="Email "
+			<h:outputLabel for="Dni_Trabajador" value="Dni trabajador "
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="T_Email"
+			<p:inputText autocomplete="off" id="Dni_Trabajador"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Email}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			<h:outputLabel for="T_Direccion" value="Direccion "
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="T_Direccion"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Direccion}"
+				value="#{herpuconAvanceController.avanceenti.dni_Trabajador}"
 				maxlength="45" required="true">
 
 			</p:inputText>
 			
-			<h:outputLabel for="certificacion_ccertificacion" value="Certificacion"
-				styleClass="control-label" />
-
 			
 			<br />
 			<p:commandButton value="Grabar"
-				actionListener="#{herpuconEntiController.insert()}"
+				actionListener="#{herpuconAvanceController.insert()}"
 				styleClass="btn btn-primary " update="@form"
-				action="listPersona?faces-redirect=true" />
+				action="listAvance?faces-redirect=true" />
 			<p:commandButton value="Cancelar"
-				action="listPersona?faces-redirect=true" immediate="true"
+				action="listAvance?faces-redirect=true" immediate="true"
 				styleClass="btn btn-default" ajax="false" />
 
 

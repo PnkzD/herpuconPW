@@ -29,7 +29,7 @@ public class HerpuconEnti {
 	private String T_Direccion;
 	
 	@ManyToOne
-	@JoinColumn(name="CCertificacion",nullable=false)
+	@JoinColumn(name="CCertificacion", referencedColumnName = "CCertificacion")
 	private HerpuconCertification CCertificacion;
 
 	public HerpuconEnti(int cdni, String d_Nombre, String d_Apellido, long n_Celular, String t_Email,

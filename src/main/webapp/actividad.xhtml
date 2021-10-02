@@ -8,80 +8,93 @@
 <ui:composition template="master.xhtml">
 
 	<ui:define name="title">
-        .:Registro de Personas:.
+        .:Registro de Actividades:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Registrar Persona</span>
+		<span>Registrar Actividad</span>
 	</ui:define>
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="Cdni" value="Dni"
+			<h:outputLabel for="CActividad" value="C_Actividad"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="Cdni"
+			<p:inputText autocomplete="off" id="CActividad"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.cdni}"
-				required="true" />
-
-			<h:outputLabel for="D_Nombre"
-				value="Nombres " styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="D_Nombre"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Nombre}"
-				maxlength="45" required="true" />
-
-
-			<h:outputLabel for="D_Apellido" value="Apellidos "
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="D_Apellido"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Apellido}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			<h:outputLabel for="N_Celular" value="Nro. de Celular"
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="N_Celular"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.n_Celular}"
+				value="#{herpuconActividadController.actividadenti.CActividad}"
 				required="true">
 
 			</p:inputText>
-			<h:outputLabel for="T_Email" value="Email "
+
+
+			<h:outputLabel for="D_NombreActividad" value="Nombre_Actividad"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="T_Email"
+			<p:inputText autocomplete="off" id="D_NombreActividad"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Email}"
+				value="#{herpuconActividadController.actividadenti.d_NombreActividad}"
 				maxlength="45" required="true">
 
 			</p:inputText>
-			<h:outputLabel for="T_Direccion" value="Direccion "
+
+
+			<h:outputLabel for="I_TipoActividad" value="Tipo_Actividad"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="T_Direccion"
+			<p:inputText autocomplete="off" id="I_TipoActividad"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Direccion}"
+				value="#{herpuconActividadController.actividadenti.i_TipoActividad}"
+				maxlength="45" required="true" >
+
+			</p:inputText>
+			<h:outputLabel for="Fecha_Actividad" value="Fecha de Actividad"
+				styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="Fecha_Actividad"
+				styleClass="form-control"
+				value="#{herpuconActividadController.actividadenti.fecha_Actividad}"
+				required="true">
+
+			</p:inputText>
+			<h:outputLabel for="Nivel_Desempenio" value="Nivel de Desempeño"
+				styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="Nivel_Desempenio"
+				styleClass="form-control"
+				value="#{herpuconActividadController.actividadenti.nivel_Desempenio}"
 				maxlength="45" required="true">
 
 			</p:inputText>
-			
-			<h:outputLabel for="certificacion_ccertificacion" value="Certificacion"
+			<h:outputLabel for="Estado_Conclusion" value="Estado de finalización"
 				styleClass="control-label" />
 
-			
+			<p:inputText autocomplete="off" id="Estado_Conclusion"
+				styleClass="form-control"
+				value="#{herpuconActividadController.actividadenti.estado_Conclusion}"
+				maxlength="45" required="true">
+
+			</p:inputText>
+
+			<h:outputLabel for="Dni_Trabajador" value="Dni de Trabajador"
+				styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="Dni_Trabajador"
+				styleClass="form-control"
+				value="#{herpuconActividadController.actividadenti.dni_Trabajador}"
+				maxlength="45" required="true">
+
+			</p:inputText>
+
+
+
 			<br />
 			<p:commandButton value="Grabar"
-				actionListener="#{herpuconEntiController.insert()}"
+				actionListener="#{herpuconActividadController.insert()}"
 				styleClass="btn btn-primary " update="@form"
-				action="listPersona?faces-redirect=true" />
+				action="listActividad?faces-redirect=true" />
 			<p:commandButton value="Cancelar"
-				action="listPersona?faces-redirect=true" immediate="true"
+				action="listActividad?faces-redirect=true" immediate="true"
 				styleClass="btn btn-default" ajax="false" />
 
 

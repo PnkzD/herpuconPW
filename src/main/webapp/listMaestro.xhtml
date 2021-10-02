@@ -10,11 +10,11 @@
 
 
 	<ui:define name="title">
-        .:Listado de Certificaciones:.
+        .:Listado de Maestros de Obra:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Certificaciones Registradas </span>
+		<span>Maestros de Obra Registrados </span>
 	</ui:define>
 
 	<ui:define name="content">
@@ -22,7 +22,7 @@
 		<h:form>
 			<div class="row">
 				<p:commandButton value="Nuevo"
-					action="#{herpuconCertificationController.nuevoCertificado()}"
+					action="#{herpuconMaestroDeObraController.nuevoMaestro()}"
 					styleClass="btn btn-primary" ajax="false" />
 			</div>
 
@@ -30,27 +30,27 @@
 				<div class="col-sm-12">
 					<div class="form-group table-responsive box-table-class">
 
-						<p:dataTable id="listaCertificacion" var="c"
-							value="#{herpuconCertificationController.listacertificados}"
+						<p:dataTable id="listaMaestro" var="m"
+							value="#{herpuconMaestroDeObraController.listaMaestro}"
 							paginator="true" paginatorPosition="top"
 							rowsPerPageTemplate="10,20,30,40,50" rows="10"
 							styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
-							<p:column headerText="Tipo Certificacion"
-								sortBy="#{c.I_TipoCertificacion}">
-								<h:outputText value="#{c.I_Tipocertificacion}" />
+							<p:column headerText="Codigo de Maestro" sortBy="#{m.CMaestro}">
+								<h:outputText value="#{m.CMaestro}" />
 							</p:column>
-							<p:column headerText="Vigencia" sortBy="#{v.vigencia}">
-								<h:outputText value="#{v.vigencia}" />
+							<p:column headerText="Descripcion de Estudios"
+								sortBy="#{m.d_Estudios}">
+								<h:outputText value="#{m.d_Estudios}" />
 							</p:column>
-							<p:column headerText="Fecha de Certificacion"
-								sortBy="#{v.f_fecha_certificacion}">
-								<h:outputText value="#{v.f_fecha_certificacion}" />
+							<p:column headerText="Id de Persona"
+								sortBy="#{m.dnipersona}">
+								<h:outputText value="#{m.dnipersona}" />
 							</p:column>
-							<p:column headerText="Valido hasta" sortBy="#{v.f_validohasta}">
-								<h:outputText value="#{v.f_validohasta}" />
+							<p:column headerText="Tipo de Equipamiento" sortBy="#{m.t_Equipamento}">
+								<h:outputText value="#{m.t_Equipamento}" />
 							</p:column>
 
 

@@ -8,7 +8,7 @@
 <ui:composition template="master.xhtml">
 
 	<ui:define name="title">
-        .:Registro de Proyecto:.
+        .:Registro de Proyectos:.
     </ui:define>
 
 	<ui:define name="titleCont">
@@ -17,56 +17,56 @@
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="cproyecto" value="Id"
+			<h:outputLabel for="CProyecto" value="C_Proyecto"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="cproyecto"
+			<p:inputText autocomplete="off" id="CProyecto"
 				styleClass="form-control"
-				value="#{HerpuconEntiController.herpuconenti.cproyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.CProyecto}"
 				required="true" />
 
-			<h:outputLabel for="d_nombreproyecto"
+			<h:outputLabel for="D_NombreProyecto"
 				value="Nombre de proyecto" styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="d_nombreproyecto"
+			<p:inputText autocomplete="off" id="D_NombreProyecto"
 				styleClass="form-control"
-				value="#{HerpuconEntiController.herpuconenti.d_nombreproyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.d_NombreProyecto}"
 				maxlength="45" required="true" />
 
-			<h:outputLabel for="f_entregaproyecto" value="Fecha de Entrega Proyecto"
+			<h:outputLabel for="F_EntregaProyecto" value="Fecha de Entrega Proyecto"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="f_entregaproyecto"
+			<p:inputText autocomplete="off" id="F_EntregaProyecto"
 				styleClass="form-control"
-				value="#{HerpuconEntiController.herpuconenti.f_entregaproyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.f_EntregaProyecto}"
 				maxlength="30" required="true">
 			</p:inputText>
 
-			<h:outputLabel for="f_inicioproyecto" value="Fecha de Inicio Proyecto"
+			<h:outputLabel for="F_InicioProyecto" value="Fecha de Inicio Proyecto"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="f_inicioproyecto"
+			<p:inputText autocomplete="off" id="F_InicioProyecto"
 				styleClass="form-control"
-				value="#{HerpuconEntiController.herpuconenti.f_inicioproyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.f_InicioProyecto}"
 				maxlength="30" required="true">
 
 			</p:inputText>
 
-			<h:outputLabel for="i_tipoproyecto"
+			<h:outputLabel for="I_TipoProyecto"
 				value="Tipo de proyecto" styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="i_tipoproyecto"
+			<p:inputText autocomplete="off" id="I_TipoProyecto"
 				styleClass="form-control"
-				value="#{HerpuconEntiController.herpuconenti.i_tipoproyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.i_TipoProyecto}"
 				maxlength="40" required="true" />
 
 			<br />
 			<p:commandButton value="Grabar"
-				actionListener="#{HerpuconEntiController.insertar()}"
+				actionListener="#{herpuconProyectoController.insert()}"
 				styleClass="btn btn-primary " update="@form"
-				action="listPersona?faces-redirect=true" />
+				action="listProyecto?faces-redirect=true" />
 			<p:commandButton value="Cancelar"
-				action="listPersona?faces-redirect=true" immediate="true"
+				action="listProyecto?faces-redirect=true" immediate="true"
 				styleClass="btn btn-default" ajax="false" />
 
 

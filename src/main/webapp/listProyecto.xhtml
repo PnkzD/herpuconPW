@@ -22,7 +22,7 @@
 		<h:form>
 			<div class="row">
 				<p:commandButton value="Nuevo"
-					action="#{HerpuconEntiController.nuevoProyecto()}"
+					action="#{herpuconProyectoController.nuevoProyecto()}"
 					styleClass="btn btn-primary" ajax="false" />
 			</div>
 
@@ -30,33 +30,33 @@
 				<div class="col-sm-12">
 					<div class="form-group table-responsive box-table-class">
 
-						<p:dataTable id="lstVaccination" var="v"
-							value="#{HerpuconProyectoController.listaCertificacion}"
+						<p:dataTable id="lstProyectos" var="p"
+							value="#{herpuconProyectoController.listaProyectos}"
 							paginator="true" paginatorPosition="top"
 							rowsPerPageTemplate="10,20,30,40,50" rows="10"
 							styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
-							<p:column headerText="Proyecto" sortBy="#{v.cproyecto}">
-								<h:outputText value="#{v.cproyecto}" />
+							<p:column headerText="Proyecto" sortBy="#{p.CProyecto}">
+								<h:outputText value="#{p.CProyecto}" />
 							</p:column>
 
 							<p:column headerText="Nombre del Proyecto"
-								sortBy="#{v.d_nombreproyecto}">
-								<h:outputText value="#{v.d_nombreproyecto}" />
+								sortBy="#{p.d_NombreProyecto}">
+								<h:outputText value="#{p.d_NombreProyecto}" />
 							</p:column>
 							<p:column headerText="Fecha de Entrega Proyecto"
-								sortBy="#{v.f_entregaproyecto}">
-								<h:outputText value="#{v.f_entregaproyecto}" />
+								sortBy="#{p.f_EntregaProyecto}">
+								<h:outputText value="#{p.f_EntregaProyecto}" />
 							</p:column>
 							<p:column headerText="Fecha de Inicio Proyecto"
-								sortBy="#{v.f_inicioproyecto}">
-								<h:outputText value="#{v.f_inicioproyecto}" />
+								sortBy="#{p.f_InicioProyecto}">
+								<h:outputText value="#{p.f_InicioProyecto}" />
 							</p:column>
 							<p:column headerText="Tipo de proyecto"
-								sortBy="#{v.i_tipoproyecto}">
-								<h:outputText value="#{v.i_tipoproyecto}" />
+								sortBy="#{p.i_TipoProyecto}">
+								<h:outputText value="#{p.i_TipoProyecto}" />
 							</p:column>
 						
 							

@@ -17,16 +17,13 @@
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="Cdni" value="Dni"
+			<h:outputLabel for="Cdni" value="Dni" styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="Cdni" styleClass="form-control"
+				value="#{herpuconEntiController.herpuconenti.cdni}" required="true" />
+
+			<h:outputLabel for="D_Nombre" value="Nombres "
 				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="Cdni"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.cdni}"
-				required="true" />
-
-			<h:outputLabel for="D_Nombre"
-				value="Nombres " styleClass="control-label" />
 
 			<p:inputText autocomplete="off" id="D_Nombre"
 				styleClass="form-control"
@@ -70,11 +67,18 @@
 				maxlength="45" required="true">
 
 			</p:inputText>
-			
-			<h:outputLabel for="certificacion_ccertificacion" value="Certificacion"
+
+			<h:outputLabel for="C_Certificacion" value="Certificacion"
 				styleClass="control-label" />
 
-			
+			<p:inputText autocomplete="off" id="C_Certificacion"
+				styleClass="form-control"
+				value="#{herpuconEntiController.herpuconenti.CCertificacion}"
+				maxlength="45" required="true">
+
+			</p:inputText>
+
+
 			<br />
 			<p:commandButton value="Grabar"
 				actionListener="#{herpuconEntiController.insert()}"

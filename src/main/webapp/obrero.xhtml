@@ -8,80 +8,51 @@
 <ui:composition template="master.xhtml">
 
 	<ui:define name="title">
-        .:Registro de Personas:.
+        .:Registro de Trabajadores:.
     </ui:define>
 
 	<ui:define name="titleCont">
-		<span>Registrar Persona</span>
+		<span>Registrar Trabajador</span>
 	</ui:define>
 
 	<ui:define name="content">
 		<h:form>
-			<h:outputLabel for="Cdni" value="Dni"
+			<h:outputLabel for="CObrero" value="Dni Trabajador"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="Cdni"
+			<p:inputText autocomplete="off" id="CObrero"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.cdni}"
-				required="true" />
-
-			<h:outputLabel for="D_Nombre"
-				value="Nombres " styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="D_Nombre"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Nombre}"
-				maxlength="45" required="true" />
-
-
-			<h:outputLabel for="D_Apellido" value="Apellidos "
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="D_Apellido"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.d_Apellido}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			<h:outputLabel for="N_Celular" value="Nro. de Celular"
-				styleClass="control-label" />
-
-			<p:inputText autocomplete="off" id="N_Celular"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.n_Celular}"
+				value="#{herpuconObreroController.obreroenti.CObrero}"
 				required="true">
-
 			</p:inputText>
-			<h:outputLabel for="T_Email" value="Email "
+
+			<h:outputLabel for="CProyecto" value="Codigo Proyecto"
 				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="T_Email"
+			<p:inputText autocomplete="off" id="CProyecto"
 				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Email}"
+				value="#{herpuconObreroController.obreroenti.CProyecto}"
+				maxlength="45" required="true">
+			</p:inputText>
+
+
+			<h:outputLabel for="dnipersona" value="Id Persona"
+				styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="dnipersona"
+				styleClass="form-control"
+				value="#{herpuconObreroController.obreroenti.dnipersona}"
 				maxlength="45" required="true">
 
 			</p:inputText>
-			<h:outputLabel for="T_Direccion" value="Direccion "
-				styleClass="control-label" />
 
-			<p:inputText autocomplete="off" id="T_Direccion"
-				styleClass="form-control"
-				value="#{herpuconEntiController.herpuconenti.t_Direccion}"
-				maxlength="45" required="true">
-
-			</p:inputText>
-			
-			<h:outputLabel for="certificacion_ccertificacion" value="Certificacion"
-				styleClass="control-label" />
-
-			
 			<br />
 			<p:commandButton value="Grabar"
-				actionListener="#{herpuconEntiController.insert()}"
+				actionListener="#{herpuconObreroController.insert()}"
 				styleClass="btn btn-primary " update="@form"
-				action="listPersona?faces-redirect=true" />
+				action="listObrero?faces-redirect=true" />
 			<p:commandButton value="Cancelar"
-				action="listPersona?faces-redirect=true" immediate="true"
+				action="listObrero?faces-redirect=true" immediate="true"
 				styleClass="btn btn-default" ajax="false" />
 
 
