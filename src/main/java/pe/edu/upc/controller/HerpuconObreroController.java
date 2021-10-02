@@ -44,6 +44,14 @@ public class HerpuconObreroController {
 		listaObrero = obreroservice.list();
 	}
 
+	public void eliminar(HerpuconObrero obrero) {
+		try {
+			obreroservice.eliminar(obrero.getCObrero());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 	public HerpuconObrero getObreroenti() {
 		return obreroenti;
 	}

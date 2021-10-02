@@ -49,7 +49,7 @@ public class HerpuconEntiDaoImpl implements IHerpuconDao {
 	}
 	
 	
-	@Override
+	@Transactional
 	public void eliminar(int Cdni) {
 		// TODO Auto-generated method stub
 		HerpuconEnti he = new HerpuconEnti();

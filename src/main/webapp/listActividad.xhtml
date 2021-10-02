@@ -65,6 +65,10 @@
 								sortBy="#{a.nivel_Desempenio}">
 								<h:outputText value="#{a.nivel_Desempenio}" />
 							</p:column>
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconActividadController.eliminar(a)}" />
+							</p:column>
 
 
 						</p:dataTable>

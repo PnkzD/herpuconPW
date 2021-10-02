@@ -45,6 +45,20 @@ public class HerpuconCertificationDaoImpl implements IHerpuconCertificationDao{
 		}
 		return lista;
 	}
+
+	@Transactional
+	@Override
+	public void eliminar(int CCertificacion) {
+		// TODO Auto-generated method stub
+		HerpuconCertification he = new HerpuconCertification();
+		try {
+			he = em.getReference(HerpuconCertification.class, CCertificacion);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
 	
 
 }

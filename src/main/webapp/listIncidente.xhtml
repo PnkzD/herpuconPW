@@ -49,8 +49,13 @@
 								sortBy="#{i.fecha_Incidente}">
 								<h:outputText value="#{i.fecha_Incidente}" />
 							</p:column>
-							<p:column headerText="Dni Trabajador" sortBy="#{i.dni_Trabajador}">
+							<p:column headerText="Dni Trabajador"
+								sortBy="#{i.dni_Trabajador}">
 								<h:outputText value="#{i.dni_Trabajador}" />
+							</p:column>
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconIncidenteController.eliminar(i)}" />
 							</p:column>
 
 

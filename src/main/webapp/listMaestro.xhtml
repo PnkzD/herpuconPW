@@ -45,14 +45,34 @@
 								sortBy="#{m.d_Estudios}">
 								<h:outputText value="#{m.d_Estudios}" />
 							</p:column>
-							<p:column headerText="Id de Persona"
-								sortBy="#{m.dnipersona}">
+							<p:column headerText="Id de Persona" sortBy="#{m.dnipersona}">
 								<h:outputText value="#{m.dnipersona}" />
 							</p:column>
-							<p:column headerText="Tipo de Equipamiento" sortBy="#{m.t_Equipamento}">
+							<p:column headerText="Tipo de Equipamiento"
+								sortBy="#{m.t_Equipamento}">
 								<h:outputText value="#{m.t_Equipamento}" />
 							</p:column>
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconMaestroDeObraController.maestroenti(m)}" />
+							</p:column>
 
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconMaestroDeObraController.eliminar(m)}" />
+							</p:column>
+						
+						<h:commandLink>
+							<p:outputLabel value="ExportarExcel"></p:outputLabel>
+							<p:dataExporter type="xls" target="listaMaestro" fileName="excelWeb"
+								pageOnly="false"></p:dataExporter>
+						</h:commandLink>
+
+						<br />
+						<h:commandLink>
+							<p:outputLabel value="ExportarPdf"></p:outputLabel>
+							<p:dataExporter type="pdf" target="listaMaestro" fileName="pdfWeb"></p:dataExporter>
+						</h:commandLink>
 
 						</p:dataTable>
 					</div>

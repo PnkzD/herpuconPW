@@ -28,4 +28,13 @@ public class HerpuconCertificationImpl implements IHerpuconCertification {
 		return hcdao.list();
 	}
 
+	@Override
+	public void eliminar(int Cdni) {
+		// TODO Auto-generated method stub
+		
+		hcdao.eliminar(Cdni);
+		
+		
+	}
+
 }

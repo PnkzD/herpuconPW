@@ -31,26 +31,29 @@
 					<div class="form-group table-responsive box-table-class">
 
 						<p:dataTable id="listaTrabajadores" var="o"
-							value="#{herpuconObreroController.listaObrero}"
-							paginator="true" paginatorPosition="top"
-							rowsPerPageTemplate="10,20,30,40,50" rows="10"
-							styleClass="table table-bordered"
+							value="#{herpuconObreroController.listaObrero}" paginator="true"
+							paginatorPosition="top" rowsPerPageTemplate="10,20,30,40,50"
+							rows="10" styleClass="table table-bordered"
 							emptyMessage="No existen registros" rowIndexVar="item"
 							style="margin-bottom:0">
 
-							<p:column headerText="Codigo de Trabajador"
-								sortBy="#{o.CObrero}">
+							<p:column headerText="Codigo de Trabajador" sortBy="#{o.CObrero}">
 								<h:outputText value="#{o.CObrero}" />
 							</p:column>
 							<p:column headerText="Codigo de Proyecto" sortBy="#{o.CProyecto}">
 								<h:outputText value="#{o.CProyecto}" />
 							</p:column>
-							<p:column headerText="Id de Persona"
-								sortBy="#{o.dnipersona}">
+							<p:column headerText="Id de Persona" sortBy="#{o.dnipersona}">
 								<h:outputText value="#{o.dnipersona}" />
 							</p:column>
-							<p:column headerText="Rol especifico" sortBy="#{o.rol_Especifico}">
+							<p:column headerText="Rol especifico"
+								sortBy="#{o.rol_Especifico}">
 								<h:outputText value="#{o.rol_Especifico}" />
+							</p:column>
+
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconObreroController.eliminar(o)}" />
 							</p:column>
 
 

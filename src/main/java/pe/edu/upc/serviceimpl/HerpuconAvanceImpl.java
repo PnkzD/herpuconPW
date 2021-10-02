@@ -28,4 +28,10 @@ public class HerpuconAvanceImpl implements IHerpuconAvance {
 		return handao.list();
 	}
 
+	@Override
+	public void eliminar(int CAvance) {
+		// TODO Auto-generated method stub
+		handao.eliminar(CAvance);
+	}
+
 }

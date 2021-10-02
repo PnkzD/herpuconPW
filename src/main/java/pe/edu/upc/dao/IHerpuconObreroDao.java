@@ -9,4 +9,6 @@ public interface IHerpuconObreroDao {
 	public void insert(HerpuconObrero hob);
 	
 	public List<HerpuconObrero> list();
+	
+	public void eliminar(int CObrero);
 }

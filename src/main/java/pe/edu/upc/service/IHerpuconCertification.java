@@ -10,4 +10,6 @@ public interface IHerpuconCertification {
 	
 	public List<HerpuconCertification> list();
 	
+	public void eliminar(int Cdni);
+	
 }

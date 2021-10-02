@@ -10,4 +10,5 @@ public interface IHerpuconAvance {
 	
 	public List<HerpuconAvance> list();
 
+	public void eliminar(int CAvance);
 }

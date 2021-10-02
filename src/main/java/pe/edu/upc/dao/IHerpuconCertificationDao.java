@@ -9,4 +9,6 @@ public interface IHerpuconCertificationDao {
 	public void insert(HerpuconCertification hc);
 	
 	public List<HerpuconCertification> list();
+	
+	public void eliminar(int CCertificacion);
 }

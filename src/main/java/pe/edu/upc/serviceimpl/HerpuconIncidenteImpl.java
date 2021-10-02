@@ -28,6 +28,12 @@ public class HerpuconIncidenteImpl implements IHerpuconIncidente{
 		// TODO Auto-generated method stub
 		return hidao.list();
 	}
+
+	@Override
+	public void eliminar(int CIncidente) {
+		// TODO Auto-generated method stub
+		hidao.eliminar(CIncidente);
+	}
 	
 	
 

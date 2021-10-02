@@ -55,6 +55,10 @@
 								sortBy="#{av.dni_Trabajador}">
 								<h:outputText value="#{av.dni_Trabajador}" />
 							</p:column>
+							<p:column headerText="Operación" exportable="false">
+								<h:commandLink action="listPowner" value="Eliminar"
+									actionListener="#{herpuconAvanceController.eliminar(av)}" />
+							</p:column>
 
 
 						</p:dataTable>

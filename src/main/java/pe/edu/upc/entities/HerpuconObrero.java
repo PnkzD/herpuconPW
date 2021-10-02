@@ -22,11 +22,11 @@ public class HerpuconObrero implements Serializable {
 	private int CObrero;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="Cdni",nullable=false)
+	@JoinColumn(name="Cdni",referencedColumnName = "Cdni")
 	private HerpuconEnti dnipersona;
 	
 	@ManyToOne
-	@JoinColumn(name="CProyecto",nullable=false)
+	@JoinColumn(name="CProyecto",referencedColumnName = "CProyecto")
 	private HerpuconProyecto CProyecto;
 	@Column(name="Rol_Especifico",nullable=false)
 	private String Rol_Especifico;

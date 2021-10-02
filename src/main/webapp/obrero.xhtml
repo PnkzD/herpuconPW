@@ -31,8 +31,17 @@
 
 			<p:inputText autocomplete="off" id="CProyecto"
 				styleClass="form-control"
-				value="#{herpuconObreroController.obreroenti.CProyecto}"
+				value="#{herpuconProyectoController.herpuproyenti.CProyecto}"
 				maxlength="45" required="true">
+			</p:inputText>
+			<h:outputLabel for="Rol_Especifico" value="Rol Especifico"
+				styleClass="control-label" />
+
+			<p:inputText autocomplete="off" id="Rol_Especifico"
+				styleClass="form-control"
+				value="#{herpuconObreroController.obreroenti.rol_Especifico}"
+				maxlength="45" required="true">
+
 			</p:inputText>
 
 
@@ -41,7 +50,7 @@
 
 			<p:inputText autocomplete="off" id="dnipersona"
 				styleClass="form-control"
-				value="#{herpuconObreroController.obreroenti.dnipersona}"
+				value="#{herpuconEntiController.herpuconenti.cdni}"
 				maxlength="45" required="true">
 
 			</p:inputText>

@@ -24,7 +24,7 @@ public class HerpuconMaestroDeObra implements Serializable{
 	private int CMaestro;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="Cdni",nullable=false)
+	@JoinColumn(name="Cdni",referencedColumnName = "Cdni")
 	private HerpuconEnti dnipersona;
 	
 	@Column(name="T_Equipamento",nullable=false,length=50)

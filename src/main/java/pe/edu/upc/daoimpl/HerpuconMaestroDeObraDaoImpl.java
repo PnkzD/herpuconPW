@@ -46,6 +46,18 @@ public class HerpuconMaestroDeObraDaoImpl implements IHerpuconMaestroDeObraDao{
 		// TODO Auto-generated method stub
 		return lista;
 	}
+
+	@Override
+	public void eliminar(int CMaestro) {
+		// TODO Auto-generated method stub
+		HerpuconMaestroDeObra he = new HerpuconMaestroDeObra();
+		try {
+			he = em.getReference(HerpuconMaestroDeObra.class, CMaestro);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 	
 	
 

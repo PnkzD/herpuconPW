@@ -43,6 +43,14 @@ public class HerpuconAvanceController {
 	public void list() {
 		listaAvance = avanceservice.list();
 	}
+	public void eliminar(HerpuconAvance avance) {
+		try {
+			avanceservice.eliminar(avance.getCavance());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 
 	public HerpuconAvance getAvanceenti() {
 		return avanceenti;

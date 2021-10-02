@@ -30,4 +30,10 @@ public class HerpuconMaestroDeObraImpl implements IHerpuconMaestroDeObra {
 		return hmadao.list();
 	}
 
+	@Override
+	public void eliminar(int CMaestro) {
+		// TODO Auto-generated method stub
+		hmadao.eliminar(CMaestro);
+	}
+
 }

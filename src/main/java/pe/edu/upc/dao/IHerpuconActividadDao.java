@@ -10,4 +10,5 @@ public interface IHerpuconActividadDao {
 	
 	public List<HerpuconActividad> list();
 
+	public void eliminar(int CActividad);
 }

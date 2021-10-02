@@ -9,5 +9,7 @@ public interface IHerpuconAvanceDao {
 	public void insert(HerpuconAvance han);
 	
 	public List<HerpuconAvance> list();
+	
+	public void eliminar(int CAvance);
 
 }

@@ -30,6 +30,12 @@ public class HerpuconActividadImpl implements IHerpuconActividad{
 		return hadao.list();
 	}
 
+	@Override
+	public void eliminar(int CActividad) {
+		// TODO Auto-generated method stub
+		hadao.eliminar(CActividad);
+	}
+
 	
 	
 }

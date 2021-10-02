@@ -46,6 +46,18 @@ public class HerpuconIncidenteDaoImpl implements IHerpuconIncidenteDao {
 		return lista;
 	}
 	
+	@Transactional
+	@Override
+	public void eliminar(int CCertificado) {
+		HerpuconIncidente he = new HerpuconIncidente();
+		try {
+			he = em.getReference(HerpuconIncidente.class, CCertificado);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
 	
 
 }

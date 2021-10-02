@@ -40,6 +40,15 @@ public class HerpuconActividadController {
 	public void list() {
 		listaActividad=actividadservice.list();
 	}
+	
+	public void eliminar(HerpuconActividad actividad) {
+		try {
+			actividadservice.eliminar(actividad.getCActividad());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 	public HerpuconActividad getActividadenti() {
 		return actividadenti;
 	}

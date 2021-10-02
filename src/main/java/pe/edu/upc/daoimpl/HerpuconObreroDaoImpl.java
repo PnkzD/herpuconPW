@@ -43,6 +43,19 @@ public class HerpuconObreroDaoImpl implements IHerpuconObreroDao{
 		}
 		return lista;
 	}
+
+	@Transactional
+	@Override
+	public void eliminar(int CObrero) {
+		// TODO Auto-generated method stub
+		HerpuconObrero he = new HerpuconObrero();
+		try {
+			he = em.getReference(HerpuconObrero.class, CObrero);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
  
 	
 }

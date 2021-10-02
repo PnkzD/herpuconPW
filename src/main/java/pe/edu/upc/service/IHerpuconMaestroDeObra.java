@@ -9,5 +9,6 @@ public interface IHerpuconMaestroDeObra {
 	public void insert(HerpuconMaestroDeObra hma);
 	
 	public List<HerpuconMaestroDeObra> list();
-
+	
+	public void eliminar(int CMaestro);
 }

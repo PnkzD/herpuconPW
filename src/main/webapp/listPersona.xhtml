@@ -62,9 +62,22 @@
 
 							<p:column headerText="Operación" exportable="false">
 								<h:commandLink action="listPowner" value="Eliminar"
-									actionListener="#{herpuconEntiController.eliminar(persona)}" />
+									actionListener="#{herpuconEntiController.eliminar(z)}" />
 							</p:column>
 						</p:dataTable>
+
+						<h:commandLink>
+							<p:outputLabel value="ExportarExcel"></p:outputLabel>
+							<p:dataExporter type="xls" target="lstPersona" fileName="excelWeb"
+								pageOnly="false"></p:dataExporter>
+						</h:commandLink>
+
+						<br />
+						<h:commandLink>
+							<p:outputLabel value="ExportarPdf"></p:outputLabel>
+							<p:dataExporter type="pdf" target="lstPersona" fileName="pdfWeb"></p:dataExporter>
+						</h:commandLink>
+
 					</div>
 
 				</div>

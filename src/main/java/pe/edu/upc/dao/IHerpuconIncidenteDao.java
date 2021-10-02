@@ -9,4 +9,6 @@ public interface IHerpuconIncidenteDao {
 	public void inser(HerpuconIncidente hi);
 	
 	public List<HerpuconIncidente> list();
+	
+	public void eliminar(int CIncidente);
 }

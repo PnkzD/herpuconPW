@@ -9,5 +9,7 @@ public interface IHerpuconActividad {
 	public void insert(HerpuconActividad ha);
 	
 	public List<HerpuconActividad> list();
+	
+	public void eliminar(int CActividad);
 
 }

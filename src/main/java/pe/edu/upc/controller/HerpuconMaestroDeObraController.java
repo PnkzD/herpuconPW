@@ -42,6 +42,15 @@ public class HerpuconMaestroDeObraController {
 	public void list() {
 		listaMaestro = maestroservice.list();
 	}
+	public void eliminar(HerpuconMaestroDeObra maestro) {
+		try {
+			maestroservice.eliminar(maestro.getCMaestro());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
+
 
 	public HerpuconMaestroDeObra getMaestroenti() {
 		return maestroenti;

@@ -31,6 +31,12 @@ public class HerpuconObreroImpl implements IHerpuconObrero{
 		return hobdao.list();
 	}
 
+	@Override
+	public void eliminar(int CObrero) {
+		// TODO Auto-generated method stub
+		hobdao.eliminar(CObrero);
+	}
+
 	
 	
 }

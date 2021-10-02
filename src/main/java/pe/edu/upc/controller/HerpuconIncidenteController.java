@@ -39,6 +39,15 @@ public class HerpuconIncidenteController {
 		incidenteservice.insert(incidenteenti);
 		this.list();
 	}
+	
+	public void eliminar(HerpuconIncidente incidente) {
+		try {
+			incidenteservice.eliminar(incidente.getCincidente());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 
 	public void list() {
 		listaIncidente = incidenteservice.list();

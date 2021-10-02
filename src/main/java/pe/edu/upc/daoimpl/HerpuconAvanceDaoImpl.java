@@ -46,5 +46,18 @@ public class HerpuconAvanceDaoImpl implements IHerpuconAvanceDao{
 		return lista;
 	}
 
+	@Transactional
+	@Override
+	public void eliminar(int CAvance) {
+		// TODO Auto-generated method stub
+		HerpuconAvance he = new HerpuconAvance();
+		try {
+			he = em.getReference(HerpuconAvance.class, CAvance);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
 	
 }

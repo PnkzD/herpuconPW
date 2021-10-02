@@ -44,4 +44,18 @@ public class HerpuconActividadDaoImpl implements IHerpuconActividadDao{
 		return lista;
 	}
 
+	@Transactional
+	@Override
+	public void eliminar(int CActividad) {
+		// TODO Auto-generated method stub
+		HerpuconActividad he = new HerpuconActividad();
+		try {
+			he = em.getReference(HerpuconActividad.class, CActividad);
+			em.remove(he);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+
 }

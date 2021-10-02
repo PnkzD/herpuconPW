@@ -39,6 +39,14 @@ public class HerpuconCertificationController {
 	public void list() {
 		listacertificados = herpuservice.list();
 	}
+	public void eliminar(HerpuconCertification certificacion) {
+		try {
+			herpuservice.eliminar(certificacion.getCCertificacion());
+			this.list();
+		} catch (Exception e) {
+			e.getMessage();
+		}
+	}
 
 	public HerpuconCertification getHerpuconcerti() {
 		return herpuconcerti;
